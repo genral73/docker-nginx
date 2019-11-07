@@ -1,5 +1,4 @@
 FROM nginx:alpine
- 
-COPY html/index.html /etc/nginx/sites-enabled/
 
-RUN apt update && apt add bash
+COPY config/default.conf /etc/nginx/conf.d/
+COPY html/index.html /usr/share/nginx/html/
